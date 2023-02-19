@@ -1,0 +1,45 @@
+App.js
+_______________________________________________
+
+import './App.css';
+import Header from './Header';
+    //THIS IS CALLED "JSX" SIMILAR TO HTML
+function App() {
+  let name="secondheader" //can be used anywhere 
+  return (
+            <div className="App">
+            <Header />
+            <h1>{name}</h1>
+            <Header />
+            </div>
+          );
+        }
+export default App;
+
+
+Header.jsx
+__________________________________________
+
+import Footer from './components/Footer';
+
+const Header = () => {
+    return(
+        <div>
+            <h1>This is Header</h1>
+            <p>This is amazing title</p>
+            <Footer />
+        </div>
+    )
+}
+export default Header;
+
+Footer
+___________________________________________
+
+
+export const Footer = () => {
+  return (
+    <h1>Footer</h1>
+  )
+} 
+export default Footer
