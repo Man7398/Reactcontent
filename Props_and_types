@@ -98,3 +98,13 @@ ________________________________________________________________________________
                                             TYPES
 1)Npm Install Prop-Types
 2)
+import Prop from 'prop-types'
+Student.propTypes = {
+name: propTypes.string,
+age: propTypes. number
+
+Student.defaultProps ={
+name: "Name",
+age: 0
+}
+}
