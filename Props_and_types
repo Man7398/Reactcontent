@@ -1,0 +1,100 @@
+import './App.css';
+import Props from './Components/Props'
+
+    //THIS IS CALLED "JSX" SIMILAR TO HTML
+  function App() {
+    return (
+            <div className="App">
+              <Props 
+                name="Manvendra"
+                age={23}
+                number={97}
+                />
+             <Props  
+              name="Mayank"
+              age={23}
+              number={97}
+                />
+             <Props   
+              name="Rahul"
+              age={23}
+              number={97}
+                />
+              </div>
+            );
+          }
+export default App;
+
+____________________________________________________________________________________
+
+1st METHOD TO DISPLAY
+
+const Props = (props) => {
+  return (
+    <div>
+         <h1>{props.name}</h1>
+         <h2 >{props.age}</h2>
+         <h3>{props.number}</h3>
+    </div>
+
+  )
+}
+
+export default Props
+
+________________________________________________________________________________________
+
+2nd METHOD
+
+
+const Props = ({name,age,number}) => {
+  return (
+    <div>
+         <h1>{name}</h1>
+         <h2 >{age}</h2>
+         <h3>{number}</h3>
+    </div>
+
+  )
+}
+
+export default Props
+
+_______________________________________________________________________________________________________
+
+HOW TO ADD PROP FROM OTHER FILE
+
+import React from 'react'
+
+const Comp = (name) => {
+  return (
+    <div>{name}</div>
+  
+
+  )
+}
+
+export default Comp
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+import Comp from "./Comp"
+const Props = ({name,age}) => {
+  return (
+    <div>
+         <h1>{name}</h1>
+         <h2 >{age}</h2>
+         <Comp name={name}
+          
+         />
+    </div>
+
+  )
+}
+
+export default Props
+
+
+_______________________________________________________________________________________
+
+                                            TYPES
+1)Npm Install Prop-Types
+2)
