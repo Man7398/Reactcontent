@@ -1,0 +1,26 @@
+//Inline CSS
+//<div style={{backgroundColor:"red"}};
+
+ <h2 className="Footer">HOME</h2>
+ 
+.header{
+  background-color: yellow;
+  text-align: center;
+}
+.Footer{
+background-color: rgb(228, 140, 9);
+}
+
+_________________________________________________________________________________________________
+ 
+ function App() {
+    //let name="secondheader" //can be used anywhere 
+    return (
+              <div className="App">
+              <Header />
+              Welcome to React
+              </div>
+            );
+     }  
+    
+  ____________________________________________________________________________________________________  
