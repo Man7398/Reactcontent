@@ -108,3 +108,64 @@ name: "Name",
 age: 0
 }
 }
+
+EXAMPLE-
+ APP.JS
+ 
+import './App.css';
+import Props from './Components/Props';
+    //THIS IS CALLED "JSX" SIMILAR TO HTML
+  function App() {
+    //let name="secondheader" //can be used anywhere 
+    return (
+              <div className="App">
+              <Props 
+             //Nothing will appear here if do not pass anything
+                />
+            
+              </div>
+            );
+          }
+export default App;
+--------------------------------
+PROPS TYPES PASSING
+
+import React from "react"
+import Comp from "./Comp"
+import PropTypes from 'prop-types';
+const Props = ({name,age}) => {
+  return (
+    <div>
+         <h1>{name}</h1>
+         <h2 >{age}</h2>
+         <Comp 
+              name={name}
+              age={age}
+         />
+    </div>
+
+  )
+}
+
+Props.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number
+};
+ Props.defaultProps = {
+   name: "Manny",
+   age:23
+  };
+export default Props
+----------------------------------
+import React from 'react'
+
+const Comp = (props) => {
+  return (
+    <div>
+     <p>{props.name}</p>
+     <p>{props.age}</p>
+    </div>
+  )
+}
+
+export default Comp
