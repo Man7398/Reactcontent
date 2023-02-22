@@ -1,0 +1,45 @@
+
+import './App.css';
+import Content from './Components/movieproject/Content';
+import Movies from './Components/movieproject/Movies';
+import movies from './Components/movieproject/manifest.json' //Take an element from Json File
+
+//THIS IS CALLED "JSX" SIMILAR TO HTML
+  function App() {
+    //let name="secondheader" //can be used anywhere 
+    return (
+              <div className="App">
+              <Movies />
+              <div className="main">
+             {
+              movies.map((element)=>{
+              return(
+                <Content
+                title={element.Title}
+                year={element.Year}  
+                img={element.Poster}
+                />
+                )
+             })
+             }
+              </div>
+              </div>
+            );
+          }
+export default App;
+_____________________________________________________________________
+Content.js
+
+import React from 'react'
+
+const Content = (props) => {
+  return (
+        <div className='Shows'>
+            <img src={props.img} alt=''/>
+            <p>{props.Title}</p>
+            <p>{props.Year}</p>
+        </div>
+  )
+}
+
+export default Content
