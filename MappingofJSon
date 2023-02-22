@@ -36,8 +36,8 @@ const Content = (props) => {
   return (
         <div className='Shows'>
             <img src={props.img} alt=''/>
-            <p>{props.Title}</p>
-            <p>{props.Year}</p>
+            <p>{props.title}</p>
+            <p>{props.year}</p>
         </div>
   )
 }
