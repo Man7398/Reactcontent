@@ -1,0 +1,54 @@
+
+    let name='secondheader' //The use of if else 
+    if(name==="false")
+    return <h1>land</h1> 
+    else
+    return (
+              <div className="App">
+              {
+                  name === 'secondheader' ? <Movies /> : <div>Dekh le bhai</div>
+              }
+
+             
+              <div className="main">
+             {
+              movies.map((element,index)=>{
+              return(
+                <Content
+                key={index} // for allocation of unique indexing
+                title={element.Title}
+                year={element.Year}  
+                img={element.Poster}
+                />
+                )
+             })
+             }
+              </div>
+              </div>
+            );
+          }
+export default App;
+
+__________________________________________________________________________________________
+
+ELSE IF
+
+function App() {
+  
+    let name=false;
+    
+    return (
+              <div className="App">
+              {
+                (() =>{
+                if(name) {
+                return <h1 style={{color: 'black'}}>Dekh le bhai</h1>
+                } else {
+                return <h1 style={{color: 'black'}}>dekh mat liyo galti se bhi</h1>
+                }
+                })()
+                }
+__________________________________________________________________________________________
+Console In browser:
+const obj={name:shubham,age:23}
+const{name,age}=obj;
