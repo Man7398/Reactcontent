@@ -8,7 +8,6 @@
               {
                   name === 'secondheader' ? <Movies /> : <div>Dekh le bhai</div>
               }
-
               <div className="main">
              {
               movies.map((element,index)=>{
