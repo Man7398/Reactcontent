@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Header';
 import React ,{useState} from 'react';
     //THIS IS CALLED "JSX" SIMILAR TO HTML
+
 function App() {
   const[num,setNum]= useState(1);
   //const [selectedRoom,setselectedRoom]=useState(initialValue);
